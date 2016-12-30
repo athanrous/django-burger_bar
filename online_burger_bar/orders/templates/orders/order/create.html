@@ -14,7 +14,7 @@
                 <li>{{ item.quantity }} {{ item.product.name }} <span>€{{ item.total_price }}</span></li>
             {% endfor %}
         </ul>
-        <p>Total: €{{ cart.get_total_price }}</p>
+        <p>Total: €{{ cart.get_total_price_after_discount|floatformat:"2" }}</p>
     </div>
     
     <form action="." method="post" class="order-form">
